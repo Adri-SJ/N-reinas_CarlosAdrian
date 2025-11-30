@@ -1,0 +1,5 @@
+# Ignorar carpetas de dependencias y builds
+venv/
+node_modules/
+frontend/dist/
+.env

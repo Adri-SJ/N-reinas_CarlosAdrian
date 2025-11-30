@@ -1,0 +1,173 @@
+.solver-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    min-height: 100vh; 
+    min-width: 1500px;
+    padding-top: 10px;
+}
+
+
+.solver-container h1 {
+    color: #2c3e50;
+    margin-bottom: 20px; 
+    font-size: 2em; 
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Contenedor principal de Layout: Mantiene el tablero y controles uno al lado del otro */
+.main-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px; 
+    width: 95%;
+    flex-wrap: nowrap; 
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 100px);
+}
+
+/* Panel de Controles/Estado (Sidebar) */
+.control-panel {
+    width: 350px; 
+    min-width: 300px; 
+    
+    height: fit-content; 
+    max-height: 100%; 
+    overflow-y: auto; 
+    
+    background-color: white;
+    padding: 25px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    
+    border-top: 5px solid #3498db; 
+    
+}
+.control-panel h3 {
+    color: #2c3e50; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input-control label {
+    font-weight: 600;
+    color: #34495e; 
+}
+.input-control input {
+    color: #ffffff; 
+}
+.status-info p {
+    color: #2c3e50 !important; 
+
+}
+
+
+.controls button {
+    background-color: #2c3e50; 
+    color: white;
+    border: none;
+    padding: 12px 25px; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: 700; 
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+.navigation-controls button { 
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: 600;
+    display:inline;
+    align-items: center;
+    gap: 20px;
+}
+
+.controls button:hover, .navigation-controls button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.controls button:disabled, .navigation-controls button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.board-container {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-width: 400px;
+    height: 100%; 
+}
+
+.chess-board {
+    display: grid;
+    margin: 0;
+    border: 3px solid #2c3e50; 
+    aspect-ratio: 1 / 1; 
+    
+    max-height: 100%; 
+    max-width: 100%;
+    width: min(100%, 80vh);
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.input-control label {
+    font-weight: 600;
+    color: #34495e;
+}
+.input-control input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.queen-icon {
+    font-size: 4vmin; 
+    color: #000;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9); 
+    font-weight: 900;
+}
+
+.cell.white {
+    background-color: #f0d9b5; 
+}
+.cell.black {
+    background-color: #b58863; 
+}
+
+
+.cell-placing {
+    background-color: #2ecc71 !important; 
+}
+
+.cell-backtracking {
+    background-color: #e74c3c !important; 
+    opacity: 0.9;
+}
+
+.cell-solution {
+    background-color: #f1c40f !important; 
+    animation: pulse 1s infinite alternate; 
+}
